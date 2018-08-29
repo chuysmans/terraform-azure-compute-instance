@@ -12,7 +12,6 @@ resource "azurerm_resource_group" "myfirstrg" {
 
 module "windowsserver" {
   source              = "Azure/compute/azurerm"
-  version             = "1.1.6"
   location            = "${var.resource_group_location}"
   vm_hostname         = "windowsvm"
   vm_size             = "${var.vm_size}"
