@@ -7,7 +7,6 @@ resource "azurerm_resource_group" "myfirstrg" {
     environment = "${var.environment_tag}"
     ttl         = "${var.ttl_tag}"
     owner       = "${var.owner_tag}"
-    demo        = "AusSuper"
   }
 }
 
