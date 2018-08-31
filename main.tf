@@ -21,4 +21,9 @@ module "windowsserver" {
   public_ip_dns       = ["${var.name_prefix}"]
   vnet_subnet_id      = "${azurerm_subnet.myfirstsubnet.id}"
   resource_group_name = "${azurerm_resource_group.myfirstrg.name}"
+  tags {
+    environment = "${var.environment_tag}"
+    ttl         = "${var.ttl_tag}"
+    owner       = "${var.owner_tag}"
+  }
 }
