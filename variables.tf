@@ -9,21 +9,27 @@ variable "resource_group_location" {
     default     = "East US"
     description = "This variable defines the region resources will be created in"
 }
-variable "environment_tag" { 
-    type        = "string" 
-    default     = "Production" 
+
+variable "resource_group_name" {
+    type        = "string"
+    default     = "Test-RG"
+    description = "This variable defines the name for the RG"
+}
+variable "environment_tag" {
+    type        = "string"
+    default     = "Production"
     description = "Environment Tag"
 }
 
-variable "ttl_tag" { 
-    type        = "string" 
-    default     = "-1" 
+variable "ttl_tag" {
+    type        = "string"
+    default     = "-1"
     description = "Time To Live in hours for tagged resources.  Do not use units.  -1 is infinite"
 }
 
-variable "owner_tag" { 
-    type        = "string" 
-    default     = "ops@" 
+variable "owner_tag" {
+    type        = "string"
+    default     = "ops@"
     description = "Owner of resources created."
 }
 
@@ -56,4 +62,3 @@ variable "vm_size" {
     default     = "Standard_DS1_V2"
     description = "Virtual Machine instance type"
 }
-
