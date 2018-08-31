@@ -20,7 +20,7 @@ module "windowsserver" {
   vm_os_simple        = "WindowsServer"
   public_ip_dns       = ["${var.name_prefix}"]
   vnet_subnet_id      = "${azurerm_subnet.myfirstsubnet.id}"
-  resource_group_name = "${azurerm_resource_group.myfirstrg.name}"
+  resource_group_name = "test-rg"
   tags {
     environment = "${var.environment_tag}"
     ttl         = "${var.ttl_tag}"
